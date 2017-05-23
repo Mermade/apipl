@@ -34,7 +34,7 @@ paths:
   /apis:
     get:
       description: ''
-      operationId: searchApis
+      operationId: mymodule.searchApis
       parameters:
         - description: free text query to match
           in: query
@@ -102,7 +102,7 @@ paths:
         - APIs
   /apis/.template:
     get:
-      operationId: getApiTemplates
+      operationId: mymodule.getApiTemplates
       parameters: []
       responses:
         '200':
@@ -117,7 +117,7 @@ paths:
   '/apis/{owner}':
     get:
       description: ''
-      operationId: getOwnerApis
+      operationId: mymodule.getOwnerApis
       parameters:
         - description: API owner identifier
           in: path
@@ -167,7 +167,7 @@ paths:
       tags:
         - APIs
     put:
-      operationId: updateOwner
+      operationId: mymodule.updateOwner
       parameters:
         - description: API owner identifier
           in: path
@@ -190,7 +190,7 @@ paths:
   '/apis/{owner}/{api}':
     delete:
       description: ''
-      operationId: deleteApi
+      operationId: mymodule.deleteApi
       parameters:
         - description: API owner identifier
           in: path
@@ -217,7 +217,7 @@ paths:
       tags:
         - APIs
     get:
-      operationId: getApiVersions
+      operationId: mymodule.getApiVersions
       parameters:
         - description: API owner identifier
           in: path
@@ -244,7 +244,7 @@ paths:
         - application/json
         - application/yaml
       description: Saves the provided Swagger definition; the owner must match the token owner. The version will be extracted from the Swagger definitions itself.
-      operationId: saveDefinition
+      operationId: mymodule.saveDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -300,7 +300,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/.collaboration':
     delete:
-      operationId: deleteCollaboration
+      operationId: mymodule.deleteCollaboration
       parameters:
         - description: API owner identifier
           in: path
@@ -319,7 +319,7 @@ paths:
       tags:
         - APIs
     get:
-      operationId: getCollaboration
+      operationId: mymodule.getCollaboration
       parameters:
         - description: API owner identifier
           in: path
@@ -345,7 +345,7 @@ paths:
       tags:
         - APIs
     put:
-      operationId: updateCollaboration
+      operationId: mymodule.updateCollaboration
       parameters:
         - description: API owner identifier
           in: path
@@ -370,7 +370,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/.newname':
     post:
-      operationId: renameApi
+      operationId: mymodule.renameApi
       parameters:
         - description: API owner identifier
           in: path
@@ -400,7 +400,7 @@ paths:
   '/apis/{owner}/{api}/.template':
     post:
       description: ''
-      operationId: saveApiDefinitionByTemplate
+      operationId: mymodule.saveApiDefinitionByTemplate
       parameters:
         - description: API owner identifier
           in: path
@@ -442,7 +442,7 @@ paths:
   '/apis/{owner}/{api}/.transfer':
     post:
       description: ''
-      operationId: transferApi
+      operationId: mymodule.transferApi
       parameters:
         - description: API owner identifier
           in: path
@@ -478,7 +478,7 @@ paths:
   '/apis/{owner}/{api}/{version}':
     delete:
       description: ''
-      operationId: deleteApiVersion
+      operationId: mymodule.deleteApiVersion
       parameters:
         - description: API owner identifier
           in: path
@@ -511,7 +511,7 @@ paths:
         - APIs
     get:
       description: ''
-      operationId: getDefinition
+      operationId: mymodule.getDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -547,7 +547,7 @@ paths:
   '/apis/{owner}/{api}/{version}/.bump':
     post:
       description: Adds API version.
-      operationId: bumpApi
+      operationId: mymodule.bumpApi
       parameters:
         - description: API owner identifier
           in: path
@@ -594,7 +594,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment':
     get:
-      operationId: getApiComments
+      operationId: mymodule.getApiComments
       parameters:
         - description: API owner identifier
           in: path
@@ -630,7 +630,7 @@ paths:
       tags:
         - APIs
     post:
-      operationId: addApiComment
+      operationId: mymodule.addApiComment
       parameters:
         - description: API owner identifier
           in: path
@@ -668,7 +668,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment/batch':
     post:
-      operationId: updateApiComments
+      operationId: mymodule.updateApiComments
       parameters:
         - description: API owner identifier
           in: path
@@ -704,7 +704,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment/{comment}':
     delete:
-      operationId: deleteApiComment
+      operationId: mymodule.deleteApiComment
       parameters:
         - description: API owner identifier
           in: path
@@ -739,7 +739,7 @@ paths:
       tags:
         - APIs
     patch:
-      operationId: updateApiComment
+      operationId: mymodule.updateApiComment
       parameters:
         - description: API owner identifier
           in: path
@@ -782,7 +782,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment/{comment}/reply':
     post:
-      operationId: addApiCommentReply
+      operationId: mymodule.addApiCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -827,7 +827,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment/{comment}/reply/{reply}':
     delete:
-      operationId: deleteApiCommentReply
+      operationId: mymodule.deleteApiCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -867,7 +867,7 @@ paths:
       tags:
         - APIs
     patch:
-      operationId: updateApiCommentReply
+      operationId: mymodule.updateApiCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -915,7 +915,7 @@ paths:
         - APIs
   '/apis/{owner}/{api}/{version}/.comment/{comment}/status/{status}':
     put:
-      operationId: setApiCommentStatus
+      operationId: mymodule.setApiCommentStatus
       parameters:
         - description: API owner identifier
           in: path
@@ -960,7 +960,7 @@ paths:
   '/apis/{owner}/{api}/{version}/.draft':
     delete:
       description: ''
-      operationId: deleteDraftApi
+      operationId: mymodule.deleteDraftApi
       parameters:
         - description: API owner identifier
           in: path
@@ -991,7 +991,7 @@ paths:
         - Drafts
     get:
       description: ''
-      operationId: getDraft
+      operationId: mymodule.getDraft
       parameters:
         - description: API owner identifier
           in: path
@@ -1029,7 +1029,7 @@ paths:
         - application/json
         - application/yaml
       description: Saves the provided draft for a swagger definition.
-      operationId: saveDraft
+      operationId: mymodule.saveDraft
       parameters:
         - description: API owner identifier
           in: path
@@ -1073,7 +1073,7 @@ paths:
   '/apis/{owner}/{api}/{version}/.fork':
     post:
       description: Forks the provided Swagger definition.
-      operationId: forkApi
+      operationId: mymodule.forkApi
       parameters:
         - description: API owner identifier
           in: path
@@ -1122,7 +1122,7 @@ paths:
   '/apis/{owner}/{api}/{version}/compare':
     get:
       description: Compares two APIs
-      operationId: compareApis
+      operationId: mymodule.compareApis
       parameters:
         - description: API owner identifier
           in: path
@@ -1173,7 +1173,7 @@ paths:
         - APIs
     post:
       description: Compares two APIs
-      operationId: compareApisFromFile
+      operationId: mymodule.compareApisFromFile
       parameters:
         - description: API owner identifier
           in: path
@@ -1224,7 +1224,7 @@ paths:
   '/apis/{owner}/{api}/{version}/swagger.json':
     get:
       description: ''
-      operationId: getJsonDefinition
+      operationId: mymodule.getJsonDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -1257,7 +1257,7 @@ paths:
   '/apis/{owner}/{api}/{version}/swagger.yaml':
     get:
       description: ''
-      operationId: getYamlDefinition
+      operationId: mymodule.getYamlDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -1291,7 +1291,7 @@ paths:
         - APIs
   /domains:
     get:
-      operationId: searchDomains
+      operationId: mymodule.searchDomains
       parameters:
         - description: free text query to match
           in: query
@@ -1359,7 +1359,7 @@ paths:
         - Domains
   /domains/.template:
     get:
-      operationId: getDomainTemplates
+      operationId: mymodule.getDomainTemplates
       parameters: []
       responses:
         '200':
@@ -1373,7 +1373,7 @@ paths:
         - Domains
   '/domains/{owner}':
     get:
-      operationId: getOwnerDomains
+      operationId: mymodule.getOwnerDomains
       parameters:
         - description: API owner identifier
           in: path
@@ -1424,7 +1424,7 @@ paths:
         - Domains
   '/domains/{owner}/.refs':
     get:
-      operationId: getOwnerReferences
+      operationId: mymodule.getOwnerReferences
       parameters:
         - description: API owner identifier
           in: path
@@ -1443,7 +1443,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}':
     delete:
-      operationId: deleteDomain
+      operationId: mymodule.deleteDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -1477,7 +1477,7 @@ paths:
       tags:
         - Domains
     get:
-      operationId: getDomainVersions
+      operationId: mymodule.getDomainVersions
       parameters:
         - description: API owner identifier
           in: path
@@ -1503,7 +1503,7 @@ paths:
       consumes:
         - application/json
         - application/yaml
-      operationId: saveDomainDefinition
+      operationId: mymodule.saveDomainDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -1557,7 +1557,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/.newname':
     post:
-      operationId: renameDomain
+      operationId: mymodule.renameDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -1592,7 +1592,7 @@ paths:
   '/domains/{owner}/{domain}/.transfer':
     post:
       description: ''
-      operationId: transferDomain
+      operationId: mymodule.transferDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -1627,7 +1627,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}':
     delete:
-      operationId: deleteDomainVersion
+      operationId: mymodule.deleteDomainVersion
       parameters:
         - description: API owner identifier
           in: path
@@ -1666,7 +1666,7 @@ paths:
       tags:
         - Domains
     get:
-      operationId: getDomainDefinition
+      operationId: mymodule.getDomainDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -1702,7 +1702,7 @@ paths:
   '/domains/{owner}/{domain}/{version}/.bump':
     post:
       description: Adds domain version.
-      operationId: bumpDomain
+      operationId: mymodule.bumpDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -1749,7 +1749,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment':
     get:
-      operationId: getDomainComments
+      operationId: mymodule.getDomainComments
       parameters:
         - description: API owner identifier
           in: path
@@ -1785,7 +1785,7 @@ paths:
       tags:
         - Domains
     post:
-      operationId: addDomainComment
+      operationId: mymodule.addDomainComment
       parameters:
         - description: API owner identifier
           in: path
@@ -1823,7 +1823,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment/batch':
     post:
-      operationId: updateDomainComments
+      operationId: mymodule.updateDomainComments
       parameters:
         - description: API owner identifier
           in: path
@@ -1859,7 +1859,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment/{comment}':
     delete:
-      operationId: deleteDomainComment
+      operationId: mymodule.deleteDomainComment
       parameters:
         - description: API owner identifier
           in: path
@@ -1894,7 +1894,7 @@ paths:
       tags:
         - Domains
     patch:
-      operationId: updateDomainComment
+      operationId: mymodule.updateDomainComment
       parameters:
         - description: API owner identifier
           in: path
@@ -1937,7 +1937,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment/{comment}/reply':
     post:
-      operationId: addDomainCommentReply
+      operationId: mymodule.addDomainCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -1982,7 +1982,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment/{comment}/reply/{reply}':
     delete:
-      operationId: deleteDomainCommentReply
+      operationId: mymodule.deleteDomainCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -2022,7 +2022,7 @@ paths:
       tags:
         - Domains
     patch:
-      operationId: updateDomainCommentReply
+      operationId: mymodule.updateDomainCommentReply
       parameters:
         - description: API owner identifier
           in: path
@@ -2070,7 +2070,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/.comment/{comment}/status/{status}':
     put:
-      operationId: setDomainCommentStatus
+      operationId: mymodule.setDomainCommentStatus
       parameters:
         - description: API owner identifier
           in: path
@@ -2115,7 +2115,7 @@ paths:
   '/domains/{owner}/{domain}/{version}/.draft':
     delete:
       description: ''
-      operationId: deleteDraftDomain
+      operationId: mymodule.deleteDraftDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -2146,7 +2146,7 @@ paths:
         - Drafts
     get:
       description: ''
-      operationId: getDraftDomain
+      operationId: mymodule.getDraftDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -2184,7 +2184,7 @@ paths:
         - application/json
         - application/yaml
       description: Saves the provided draft for a domain definition.
-      operationId: saveDraftDomain
+      operationId: mymodule.saveDraftDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -2226,7 +2226,7 @@ paths:
   '/domains/{owner}/{domain}/{version}/.fork':
     post:
       description: Forks the provided domain definition.
-      operationId: forkDomain
+      operationId: mymodule.forkDomain
       parameters:
         - description: API owner identifier
           in: path
@@ -2275,7 +2275,7 @@ paths:
   '/domains/{owner}/{domain}/{version}/.template':
     post:
       description: ''
-      operationId: saveDomainDefinitionByTemplate
+      operationId: mymodule.saveDomainDefinitionByTemplate
       parameters:
         - description: API owner identifier
           in: path
@@ -2321,7 +2321,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/domain.json':
     get:
-      operationId: getDomainJsonDefinition
+      operationId: mymodule.getDomainJsonDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -2353,7 +2353,7 @@ paths:
         - Domains
   '/domains/{owner}/{domain}/{version}/domain.yaml':
     get:
-      operationId: getDomainYamlDefinition
+      operationId: mymodule.getDomainYamlDefinition
       parameters:
         - description: API owner identifier
           in: path
@@ -2388,7 +2388,7 @@ paths:
   /plugins:
     get:
       description: ''
-      operationId: getAvailablePlugins
+      operationId: mymodule.getAvailablePlugins
       parameters: []
       responses:
         '200':
@@ -2407,7 +2407,7 @@ paths:
   /plugins/configurations:
     delete:
       description: Deletes the provided Plugin configuration
-      operationId: removePluginConfiguration
+      operationId: mymodule.removePluginConfiguration
       parameters:
         - description: the Plugin configuration to be added or updated
           in: body
@@ -2429,7 +2429,7 @@ paths:
         - Plugins
     get:
       description: Retrieves a list of enabled plugin configurations
-      operationId: getPlugins
+      operationId: mymodule.getPlugins
       parameters:
         - description: plugin configuration objectId
           in: query
@@ -2469,7 +2469,7 @@ paths:
         - application/json
         - application/yaml
       description: Saves the provided Plugin configuration
-      operationId: addPluginConfiguration
+      operationId: mymodule.addPluginConfiguration
       parameters:
         - description: the Plugin configuration to be added or updated
           in: body
@@ -2504,7 +2504,7 @@ paths:
         - application/json
         - application/yaml
       description: Updated the provided Plugin configuration
-      operationId: updatePluginConfiguration
+      operationId: mymodule.updatePluginConfiguration
       parameters:
         - description: the Plugin configuration to be added or updated
           in: body
@@ -2537,7 +2537,7 @@ paths:
   '/plugins/configurations/execute/{id}':
     post:
       description: triggers execution of plugin configuration identified by id
-      operationId: triggerPluginConfiguration
+      operationId: mymodule.triggerPluginConfiguration
       parameters:
         - description: plugin configuration id
           in: path
@@ -2560,7 +2560,7 @@ paths:
         - application/json
         - application/yaml
       description: Get configuration schema for the provided Plugin configuration
-      operationId: buildConfigurationSchema
+      operationId: mymodule.buildConfigurationSchema
       parameters:
         - description: the Plugin configuration to be added or updated
           in: body
@@ -2591,7 +2591,7 @@ paths:
         - application/json
         - application/yaml
       description: ''
-      operationId: getApiTokenByCredentials
+      operationId: mymodule.getApiTokenByCredentials
       parameters:
         - description: user credentials
           in: body
